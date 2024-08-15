@@ -11,6 +11,7 @@
 		F7F180D92C6E9C7100A898EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F180D82C6E9C7100A898EC /* Assets.xcassets */; };
 		F7F180DC2C6E9C7100A898EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F180DB2C6E9C7100A898EC /* Preview Assets.xcassets */; };
 		F7F180E32C6E9DC400A898EC /* DessertListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F180E22C6E9DC400A898EC /* DessertListView.swift */; };
+		F7F180E92C6EA1B900A898EC /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F180E82C6EA1B900A898EC /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F7F180D82C6E9C7100A898EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7F180DB2C6E9C7100A898EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F7F180E22C6E9DC400A898EC /* DessertListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListView.swift; sourceTree = "<group>"; };
+		F7F180E82C6EA1B900A898EC /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		F7F180E62C6E9E5A00A898EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F7F180E82C6EA1B900A898EC /* Meal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7F180D52C6E9C6E00A898EC /* FetchDessertApp.swift in Sources */,
+				F7F180E92C6EA1B900A898EC /* Meal.swift in Sources */,
 				F7F180E32C6E9DC400A898EC /* DessertListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
