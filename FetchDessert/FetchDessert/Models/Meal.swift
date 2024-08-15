@@ -15,6 +15,8 @@ struct Meal: Codable {
     let strMeal: String
     let strMealThumb: String
     let idMeal: String
+    
+    /*
     let strInstructions: String?
     let strIngredient1: String?
     let strIngredient2: String?
@@ -37,14 +39,13 @@ struct Meal: Codable {
     let strMeasure8: String?
     let strMeasure9: String?
     let strMeasure10: String?
+    */
     
-    /*
     private enum CodingKeys: String, CodingKey {
         case strMeal
         case strMealThumb
         case idMeal
     }
-    */
 }
 
 
