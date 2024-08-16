@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct DessertListView: View {
-    
     @StateObject private var dessertsListViewModel = DessertListViewModel()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .task {
-                await dessertsListViewModel.getDesserts()
+        NavigationStack {
+            List(dessertsListViewModel.desserts, id: \.idMeal) { vm in
+                NavigationLink(destination: DessertDetailsView(vm: vm)) {
+                    DessertListCellView(vm: vm)
+                }
+                .listStyle(.plain)
             }
+            .navigationTitle(Titles.dessertListTitle)
+        }
+        .task {
+            await dessertsListViewModel.getDesserts()
+        }
     }
 }
 

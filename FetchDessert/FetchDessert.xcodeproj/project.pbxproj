@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F784498C2C6EFFBE00CEDBF1 /* DessertListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784498B2C6EFFBE00CEDBF1 /* DessertListCellView.swift */; };
+		F784498F2C6F03D600CEDBF1 /* DessertDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784498E2C6F03D600CEDBF1 /* DessertDetailsView.swift */; };
+		F78449922C6F18BE00CEDBF1 /* DessertDetailsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78449912C6F18BE00CEDBF1 /* DessertDetailsCellView.swift */; };
 		F7F180D52C6E9C6E00A898EC /* FetchDessertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F180D42C6E9C6E00A898EC /* FetchDessertApp.swift */; };
 		F7F180D92C6E9C7100A898EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F180D82C6E9C7100A898EC /* Assets.xcassets */; };
 		F7F180DC2C6E9C7100A898EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F180DB2C6E9C7100A898EC /* Preview Assets.xcassets */; };
 		F7F180E32C6E9DC400A898EC /* DessertListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F180E22C6E9DC400A898EC /* DessertListView.swift */; };
 		F7F180E92C6EA1B900A898EC /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F180E82C6EA1B900A898EC /* Meal.swift */; };
 		F7F180EB2C6EA98100A898EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F180EA2C6EA98100A898EC /* Constants.swift */; };
-		F7F180ED2C6EAD0200A898EC /* DessertListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F180EC2C6EAD0200A898EC /* DessertListViewModel.swift */; };
+		F7F180ED2C6EAD0200A898EC /* DessertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F180EC2C6EAD0200A898EC /* DessertViewModel.swift */; };
 		F7F180EF2C6EAFB100A898EC /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F180EE2C6EAFB100A898EC /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F784498B2C6EFFBE00CEDBF1 /* DessertListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListCellView.swift; sourceTree = "<group>"; };
+		F784498E2C6F03D600CEDBF1 /* DessertDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsView.swift; sourceTree = "<group>"; };
+		F78449912C6F18BE00CEDBF1 /* DessertDetailsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsCellView.swift; sourceTree = "<group>"; };
 		F7F180D12C6E9C6E00A898EC /* FetchDessert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchDessert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F180D42C6E9C6E00A898EC /* FetchDessertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDessertApp.swift; sourceTree = "<group>"; };
 		F7F180D82C6E9C7100A898EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -25,7 +31,7 @@
 		F7F180E22C6E9DC400A898EC /* DessertListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListView.swift; sourceTree = "<group>"; };
 		F7F180E82C6EA1B900A898EC /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		F7F180EA2C6EA98100A898EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		F7F180EC2C6EAD0200A898EC /* DessertListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListViewModel.swift; sourceTree = "<group>"; };
+		F7F180EC2C6EAD0200A898EC /* DessertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertViewModel.swift; sourceTree = "<group>"; };
 		F7F180EE2C6EAFB100A898EC /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F78449902C6F188C00CEDBF1 /* Cell View */ = {
+			isa = PBXGroup;
+			children = (
+				F784498B2C6EFFBE00CEDBF1 /* DessertListCellView.swift */,
+				F78449912C6F18BE00CEDBF1 /* DessertDetailsCellView.swift */,
+			);
+			path = "Cell View";
+			sourceTree = "<group>";
+		};
 		F7F180C82C6E9C6E00A898EC = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				F7F180E22C6E9DC400A898EC /* DessertListView.swift */,
+				F784498E2C6F03D600CEDBF1 /* DessertDetailsView.swift */,
+				F78449902C6F188C00CEDBF1 /* Cell View */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,7 +123,7 @@
 		F7F180E72C6E9E6C00A898EC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F7F180EC2C6EAD0200A898EC /* DessertListViewModel.swift */,
+				F7F180EC2C6EAD0200A898EC /* DessertViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -200,9 +217,12 @@
 				F7F180EF2C6EAFB100A898EC /* WebService.swift in Sources */,
 				F7F180D52C6E9C6E00A898EC /* FetchDessertApp.swift in Sources */,
 				F7F180E92C6EA1B900A898EC /* Meal.swift in Sources */,
+				F784498C2C6EFFBE00CEDBF1 /* DessertListCellView.swift in Sources */,
 				F7F180E32C6E9DC400A898EC /* DessertListView.swift in Sources */,
 				F7F180EB2C6EA98100A898EC /* Constants.swift in Sources */,
-				F7F180ED2C6EAD0200A898EC /* DessertListViewModel.swift in Sources */,
+				F784498F2C6F03D600CEDBF1 /* DessertDetailsView.swift in Sources */,
+				F7F180ED2C6EAD0200A898EC /* DessertViewModel.swift in Sources */,
+				F78449922C6F18BE00CEDBF1 /* DessertDetailsCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

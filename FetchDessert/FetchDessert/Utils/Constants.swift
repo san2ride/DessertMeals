@@ -7,11 +7,15 @@
 
 import Foundation
 
+struct Titles {
+    static let dessertListTitle = "Dessert List"
+}
+
 struct Urls {
     
     static let desserts: URL? = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")
     
-    static func dessertMealDetails(by mealID: String) -> URL? {
-        return URL(string: "https://themealdb.com/api/json/v1/1/lookup.php?i=\(mealID)")
+    static func dessertMealDetails(by dessert: String) -> URL? {
+        return URL(string: "https://themealdb.com/api/json/v1/1/lookup.php?i=\(dessert)")
     }
 }

@@ -1,5 +1,5 @@
 //
-//  DessertListViewModel.swift
+//  DessertViewModel.swift
 //  FetchDessert
 //
 //  Created by Jason Sanchez on 8/15/24.
@@ -21,24 +21,43 @@ class DessertListViewModel: ObservableObject, Identifiable {
             print(error.localizedDescription)
         }
     }
+    
+    func getDessertDetails(mealId: String) async {
+        do {
+            let desserts = try await WebService().fetchDessertDetailsAsync(mealId: mealId, url: Urls.dessertMealDetails(by: mealId))
+            DispatchQueue.main.async {
+                self.desserts = desserts.map(DessertViewModel.init)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 struct DessertViewModel {
     fileprivate var meal: Meal
     
-    init(meal: Meal) {
-        self.meal = meal
-    }
-    
     var strMeal: String {
-        return meal.strMeal
+        meal.strMeal
     }
     
     var strMealThumb: URL? {
-       return URL(string: meal.strMealThumb)
+       URL(string: meal.strMealThumb)
     }
     
     var idMeal: String {
-        return meal.idMeal
+        meal.idMeal
+    }
+    
+    var strInstructions: String {
+        meal.strInstructions ?? ""
+    }
+    
+    var strIngredient1: String {
+        meal.strIngredient1 ?? ""
+    }
+    
+    var strMeasure1: String {
+        meal.strMeasure1 ?? ""
     }
 }
