@@ -9,10 +9,11 @@ import Foundation
 
 struct Titles {
     static let dessertListTitle = "Dessert List"
+    static let ingredientsTitle = "Ingredients"
+    static let measurementTitle = "Measurement"
 }
 
 struct Urls {
-    
     static let desserts: URL? = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")
     
     static func dessertMealDetails(by dessert: String) -> URL? {

@@ -21,7 +21,7 @@ struct DessertListCellView: View {
                     .frame(maxWidth: 100, maxHeight: 100)
             }
             Text(vm.strMeal)
-                .font(.system(.largeTitle, weight: .bold))
+                .font(.title)
         }
     }
 }
