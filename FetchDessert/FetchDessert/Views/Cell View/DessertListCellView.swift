@@ -12,6 +12,7 @@ struct DessertListCellView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
+            //MARK: A view that asynchronously loads and displays an image.
             AsyncImage(url: vm.strMealThumb) { image in
                 image.resizable()
                     .aspectRatio(contentMode: .fit)

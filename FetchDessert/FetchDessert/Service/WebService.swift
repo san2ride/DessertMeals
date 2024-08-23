@@ -13,7 +13,7 @@ enum NetworkError: Error {
 }
 
 class WebService {
-    
+    //MARK: async/await desserts URL
     func fetchDesserts(url: URL?) async throws -> [Meal] {
         guard let url = url else {
             return []
@@ -23,7 +23,7 @@ class WebService {
         
         return mealResponse?.meals ?? []
     }
-    
+    //MARK: withCheckedThrowingContinuation - Invokes the passed in closure with a checked continuation for the current task.
     func fetchDessertDetailsAsync(mealId: String, url: URL?) async throws -> [Meal] {
         try await withCheckedThrowingContinuation { continuation in
             fetchDessertDetails(mealId: mealId, url: url) { result in
@@ -36,7 +36,7 @@ class WebService {
             }
         }
     }
-    
+    //MARK: Old School completion handler
     func fetchDessertDetails(mealId: String, url: URL?, completion: @escaping (Result<([Meal]), NetworkError>) -> Void) {
         guard let url = url else {
             completion(.failure(.badUrl))

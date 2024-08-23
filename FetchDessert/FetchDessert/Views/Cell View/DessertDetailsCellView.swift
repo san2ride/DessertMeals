@@ -28,7 +28,7 @@ struct DessertDetailsCellView: View {
             }
             VStack(alignment: .leading, spacing: 4) {
                 Text(Titles.ingredientsMeasurementsTitle)
-                    .font(.subheadline)
+                    .font(.largeTitle)
                 ForEach(vm.formattedIngredients, id: \.self) { ingredient in
                     Text(ingredient)
                 }

@@ -8,8 +8,10 @@
 import Foundation
 
 class DessertListViewModel: ObservableObject, Identifiable {
+    //MARK: When the property changes, publishing occurs. subscribers receive the new value before it’s set on the property.
     @Published var desserts: [DessertViewModel] = []
     
+    //MARK: async/await DessertListView
     func getDesserts() async {
         do {
             let desserts = try await WebService().fetchDesserts(url: Urls.desserts)
@@ -20,7 +22,7 @@ class DessertListViewModel: ObservableObject, Identifiable {
             print(error.localizedDescription)
         }
     }
-    
+    //MARK: async/await DessertDetailsView
     func getDessertDetails(mealId: String) async {
         do {
             let desserts = try await WebService().fetchDessertDetailsAsync(mealId: mealId, url: Urls.dessertMealDetails(by: mealId))
@@ -78,6 +80,6 @@ struct DessertViewModel {
         guard let ingredient = ingredient(at: index), let measure = measure(at: index), !ingredient.isEmpty else {
             return nil
         }
-        return "\(measure)     \(ingredient)"
+        return "\(measure)  \(ingredient)"
     }
 }

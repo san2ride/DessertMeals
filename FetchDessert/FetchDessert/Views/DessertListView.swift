@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DessertListView: View {
+    //MARK: @StateObject - instantiates an observable object.
     @StateObject private var dessertsListViewModel = DessertListViewModel()
     
     var body: some View {
@@ -20,6 +21,7 @@ struct DessertListView: View {
             }
             .navigationTitle(Titles.dessertListTitle)
         }
+        //MARK: asynchronous task before the view appears. task cancels after the view disappears before the action completes.
         .task {
             await dessertsListViewModel.getDesserts()
         }

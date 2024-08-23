@@ -35,7 +35,7 @@ struct Meal: Codable {
         recipe = try Recipe(from: decoder) //MARK: decode Recipe using the same decoder
     }
 }
-
+//MARK: struct Recipe handles the ingredients/measures edge cases
 struct Recipe: Codable {
     let ingredients: [String]
     let measures: [String]
