@@ -23,13 +23,14 @@ struct DessertDetailsCellView: View {
             }
             Spacer()
             VStack {
+                Text(Titles.recipeTitle)
+                    .font(.largeTitle)
                 Text(vm.strInstructions)
                     .font(.headline)
             }
             VStack(alignment: .leading) {
-                Text(Titles.recipeTitle)
+                Text(Titles.ingredientsTitle)
                     .font(.largeTitle)
-                    .bold()
                     .frame(width: 300, height: 80)
                 ForEach(vm.formattedIngredients, id: \.self) { ingredient in
                     Text(ingredient)

@@ -9,6 +9,7 @@ import Foundation
 
 struct Titles {
     static let dessertListTitle = "Dessert List"
+    static let ingredientsTitle = "Ingredients"
     static let recipeTitle = "Recipe"
 }
 

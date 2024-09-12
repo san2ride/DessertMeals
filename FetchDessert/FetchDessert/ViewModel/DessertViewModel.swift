@@ -63,19 +63,19 @@ struct DessertViewModel {
         return (0..<meal.recipe.ingredients.count).compactMap { formattedIngredient(at: $0) }
     }
     
-    //MARK: computed property to get a specific ingredient
+    //MARK: specific ingredient
     func ingredient(at index: Int) -> String? {
         guard index >= 0 && index < meal.recipe.ingredients.count else { return nil }
         return meal.recipe.ingredients[index]
     }
 
-    //MARK: computed property to get a specific measure
+    //MARK: specific measure
     func measure(at index: Int) -> String? {
         guard index >= 0 && index < meal.recipe.measures.count else { return nil }
         return meal.recipe.measures[index]
     }
 
-    //MARK: computed property to format an ingredient with its measure
+    //MARK: format an ingredient with its measure
     func formattedIngredient(at index: Int) -> String? {
         guard let ingredient = ingredient(at: index), let measure = measure(at: index), !ingredient.isEmpty else {
             return nil
